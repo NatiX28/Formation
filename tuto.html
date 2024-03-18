@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  /* Style de base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, main, footer {
+    margin: 20px;
+}
+
+/* Style du header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style de la navigation */
+nav {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style du contenu principal */
+main {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Style des sections */
+section {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+/* Style du pied de page */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style des liens */
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation FluxoScript</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>FluxoScript Documentation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#installation">2. Installation</a></li>
+            <li><a href="#syntaxe-de-base">3. Syntaxe de base</a></li>
+            <li><a href="#structures-de-contrôle">4. Structures de contrôle</a></li>
+            <li><a href="#fonctions">5. Fonctions</a></li>
+            <li><a href="#manipulation-du-dom">6. Manipulation du DOM</a></li>
+            <li><a href="#communication-http">7. Communication HTTP</a></li>
+            <li><a href="#exemples-de-code">8. Exemples de code</a></li>
+            <li><a href="#documentation-avancee">9. Documentation avancée</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>FluxoScript est un langage de programmation léger spécialement conçu pour le développement web. Il vise à simplifier la création de pages web dynamiques en fournissant une syntaxe intuitive et des fonctionnalités puissantes.</p>
+            <h3>1.1 But du langage</h3>
+            <p>FluxoScript a pour objectif de :</p>
+            <ul>
+                <li>Faciliter la manipulation du DOM (Document Object Model).</li>
+                <li>Simplifier les requêtes HTTP pour la communication avec des serveurs.</li>
+                <li>Offrir une syntaxe claire et concise pour le développement web.</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>2. Installation</h2>
+            <h3>2.1 Téléchargement</h3>
+            <p>Pour commencer à utiliser FluxoScript, téléchargez la dernière version depuis le site officiel : <a href="https://www.fluxoscript.org" target="_blank">https://www.fluxoscript.org</a></p>
+            <h3>2.2 Configuration</h3>
+            <p>Une fois téléchargé, incluez le fichier FluxoScript.js dans votre document HTML :</p>
+            <pre><code>&lt;script src="chemin/vers/FluxoScript.js"&gt;&lt;/script&gt;</code></pre>
+        </section>
+
+        <section id="syntaxe-de-base">
+            <h2>3. Syntaxe de base</h2>
+            <h3>3.1 Variables</h3>
+            <p>Déclarez une variable avec le mot-clé <code>let</code>:</p>
+            <pre><code>let message = "Hello, FluxoScript!";</code></pre>
+            <h3>3.2 Types de données</h3>
+            <p>FluxoScript prend en charge les types de données suivants :</p>
+            <ul>
+                <li>Chaînes de caractères : <code>"Hello"</code></li>
+                <li>Nombres : <code>42</code></li>
+                <li>Booléens : <code>true</code> ou <code>false</code></li>
+                <li>Tableaux : <code>[1, 2, 3]</code></li>
+                <li>Objets : <code>{ key: "value" }</code></li>
+            </ul>
+            <h3>3.3 Opérations</h3>
+            <p>Effectuez des opérations arithmétiques et logiques standard :</p>
+            <pre><code>let sum = 5 + 3;
+let isTrue = true &amp;&amp; false;</code></pre>
+        </section>
+
+        <section id="structures-de-contrôle">
+            <h2>4. Structures de contrôle</h2>
+            <h3>4.1 Conditions</h3>
+            <p>Utilisez des déclarations <code>if</code> et <code>else</code> pour des conditions :</p>
+            <pre><code>let num = 10;
+if (num > 5) {
+    // Code exécuté si la condition est vraie
+} else {
+    // Code exécuté si la condition est fausse
+}</code></pre>
+            <h3>4.2 Boucles</h3>
+            <p>Effectuez des boucles avec <code>for</code> et <code>while</code> :</p>
+            <pre><code>for (let i = 0; i &lt; 5; i++) {
+    // Code exécuté à chaque itération
+}
+
+let i = 0;
+while (i &lt; 5) {
+    // Code exécuté tant que la condition est vraie
+    i++;
+}</code></pre>
+        </section>
+
+        <section id="fonctions">
+            <h2>5. Fonctions</h2>
+            <h3>5.1 Définition</h3>
+            <p>Définissez des fonctions avec le mot-clé <code>function</code> :</p>
+            <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}</code></pre>
+            <h3>5.2 Appel</h3>
+            <p>Appelez des fonctions avec des arguments :</p>
+            <pre><code>let greeting = greet("World");</code></pre>
+        </section>
+
+        <section id="manipulation-du-dom">
+            <h2>6. Manipulation du DOM</h2>
+            <h3>6.1 Sélection d'éléments</h3>
+            <p>Sélectionnez des éléments du DOM avec des sélecteurs CSS :</p>
+            <pre><code>let myElement = FluxoScript.select("#monElement");</code></pre>
+            <h3>6.2 Modification d'éléments</h3>
+            <p>Modifiez le contenu d'un élément :</p>
+            <pre><code>myElement.innerHTML = "Nouveau contenu";</code></pre>
+        </section>
+
+        <section id="communication-http">
+            <h2>7. Communication HTTP</h2>
+            <h3>7.1 Requêtes GET</h3>
+            <p>Effectuez des requêtes GET de manière asynchrone :</p>
+            <pre><code>FluxoScript.get("https://api.exemple.com/data", function(response) {
+    console.log(response);
+});</code></pre>
+            <h3>7.2 Requêtes POST</h3>
+            <p>Effectuez des requêtes POST avec des données :</p>
+            <pre><code>let data = { key: "value" };
+FluxoScript.post("https://api.exemple.com/save", data, function(response) {
+    console.log(response);
+});</code></pre>
+        </section>
+
+        <section id="exemples-de-code">
+            <h2>8. Exemples de code</h2>
+            <p>Consultez le <a href="https://github.com/fluxoscript-examples" target="_blank">répertoire d'exemples FluxoScript</a> pour des exemples de code pratiques.</p>
+        </section>
+
+
+
+        <section id="documentation-avancee">
+          <h2>9. Documentation Avancée</h2>
+          <h3>9.1 Modules</h3>
+          <p>FluxoScript prend en charge la modularité à l'aide de modules. Pour utiliser un module, utilisez la commande <code>import</code>.</p>
+          <pre><code>import module from 'nom-du-module';</code></pre>
+
+          <h3>9.2 Programmation Asynchrone</h3>
+          <p>Explorez les concepts de programmation asynchrone avec FluxoScript, y compris l'utilisation de Promesses et les fonctions asynchrones.</p>
+          <pre><code>async function fetchData() {
+  // Code asynchrone
+  let data = await makeAsyncCall();
+  return data;
+}</code></pre>
+
+          <h3>9.3 Utilisation avancée du DOM</h3>
+          <p>Manipulez le DOM de manière plus avancée en utilisant des fonctionnalités telles que les événements, les animations, et la gestion des formulaires.</p>
+          <pre><code>FluxoScript.select('#monElement').addEventListener('click', function() {
+  // Gérer l'événement click
+});</code></pre>
+
+<h3>9.4 Fonctions Avancées</h3>
+    
+    <h4>1. Génération de Nombre Aléatoire</h4>
+    <p>Utilisez la fonction <code>generateRandomNumber</code> pour obtenir un nombre aléatoire entre une valeur minimale et maximale.</p>
+    <pre><code>let randomNum = generateRandomNumber(1, 100);</code></pre>
+
+    <h4>2. Conversion de Texte en Majuscules</h4>
+    <p>La fonction <code>convertToUpperCase</code> transforme une chaîne de texte en majuscules.</p>
+    <pre><code>let upperCaseText = convertToUpperCase("Hello, FluxoScript!");</code></pre>
+
+    <h4>3. Calcul de la Factorielle</h4>
+    <p>Calculez la factorielle d'un nombre avec <code>calculateFactorial</code>.</p>
+    <pre><code>let factorialResult = calculateFactorial(5);</code></pre>
+
+    <h4>4. Fusion de Tableaux</h4>
+    <p>La fonction <code>mergeArrays</code> combine deux tableaux en un seul.</p>
+    <pre><code>let mergedArray = mergeArrays([1, 2, 3], [4, 5, 6]);</code></pre>
+
+    <h4>5. Vérification de Palindrome</h4>
+    <p>Vérifiez si un mot est un palindrome avec <code>isPalindrome</code>.</p>
+    <pre><code>let isPalindromic = isPalindrome("radar");</code></pre>
+
+    <h4>6. Création de Chaîne Aléatoire</h4>
+    <p>La fonction <code>generateRandomString</code> crée une chaîne aléatoire de longueur spécifiée.</p>
+    <pre><code>let randomString = generateRandomString(8);</code></pre>
+
+    <h4>7. Tri de Tableau en Ordre Décroissant</h4>
+    <p>Utilisez <code>sortArrayDescending</code> pour trier un tableau en ordre décroissant.</p>
+    <pre><code>let descendingArray = sortArrayDescending([3, 1, 4, 1, 5, 9, 2]);</code></pre>
+
+    <h4>8. Validation d'Adresse Email</h4>
+    <p>Vérifiez si une adresse e-mail est valide avec <code>validateEmail</code>.</p>
+    <pre><code>let isValidEmail = validateEmail("example@email.com");</code></pre>
+
+    <h4>9. Conversion de Température</h4>
+    <p>La fonction <code>convertTemperature</code> convertit une température de Celsius à Fahrenheit.</p>
+    <pre><code>let fahrenheitTemperature = convertTemperature(25, 'CtoF');</code></pre>
+
+    <h4>10. Génération de Mot de Passe</h4>
+    <p>Créez un mot de passe fort avec <code>generateStrongPassword</code>.</p>
+    <pre><code>let strongPassword = generateStrongPassword();</code></pre>
+
+
+      </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2023 FluxoScript. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
